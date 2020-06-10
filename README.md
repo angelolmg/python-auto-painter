@@ -66,7 +66,7 @@ so I don't have to mannualy start the process for new lines daily. That's easily
 
 ## Authors
 
-* **Angelo Leite** - *Initial work* - [angelolmg](https://github.com/angelolmg)
+* **Angelo Leite** - *Finished work* - [angelolmg](https://github.com/angelolmg)
 
 ## License
 
