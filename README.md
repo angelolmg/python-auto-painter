@@ -60,7 +60,7 @@ so I don't have to mannualy start the process for new lines daily. That's easily
 
 ## Built With
 
-* Python with a bunch of modules. Most notably the 'requests', 'PIL', 'cv2', 'moviepy' and the google drive ones.
+* Python 3.8 with a bunch of modules. Most notably the 'requests', 'PIL', 'cv2', 'moviepy' and the google drive ones.
 * [Colormind API](http://colormind.io/) for cool color palettes.
 * [Random word API](https://random-word-api.herokuapp.com/home) for cool placeholder names. 
 
