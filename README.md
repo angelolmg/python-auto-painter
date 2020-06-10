@@ -2,6 +2,8 @@
 
 Auto painter and timelapse maker for the drawings in my IG page [@aqueleangelo](https://www.instagram.com/aqueleangelo/)
 
+![](banner.png)
+
 It gets a linework (if there's any) from a folder in my google drive, paints it, makes a collage, video time lapse of the process and then places it in another drive folder.
 With some modification, could be used to paint other styles.
 
