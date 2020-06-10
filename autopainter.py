@@ -205,9 +205,6 @@ def GetColorSet():
         payload = '{"model":"default"}'
 
         results = requests.get(url, data = payload)
-        # if request isn't successful, return a random rgba set
-        if(results.status_code != 200):
-            return (GetRandomRGBA(), GetRandomRGBA(), GetRandomRGBA(), GetRandomRGBA(), 255)
         colors = results.json()
         for tuples in colors['result']:
             colorArray.append((tuples[0], tuples[1], tuples[2], 255))
@@ -322,7 +319,6 @@ def JoinAllImages():
 
 def getNextProjectName():
     wordSize = 9
-    getAttempts = 100
     i = 0
     num = 0
 
@@ -337,11 +333,6 @@ def getNextProjectName():
             i += 1
             url = 'https://random-word-api.herokuapp.com/word?number=2&swear=0'
             results = requests.get(url)
-            # if request isn't successful, return a random name set
-            if((results.status_code != 200) | (i > getAttempts)):
-                x = y = 'xxx'
-                break
-
             words = results.json()
             x = words[0]
             y = words[1]
