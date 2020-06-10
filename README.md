@@ -1,6 +1,6 @@
 # python-auto-painter
 
-Auto painter and timelapse maker for the drawings in my IG page [@aqueleangelo](https://www.instagram.com/aqueleangelo/)
+Auto painter and time-lapse maker for the drawings in my IG page [@aqueleangelo](https://www.instagram.com/aqueleangelo/)
 
 ![](banner.png)
 
@@ -17,10 +17,22 @@ These instructions will get you a copy of the project up and running on your loc
 
 This was built in python 3.8, with the lasted versions of all modules as today *(2020/7/6)*. 
 
-It uses two different APIS tho get color pallets and names. See 'Built with' section.
+It uses two different APIS to get color pallets and names. See 'Built with' section.
+
+### Installing
+
+1. Download or clone the repository
+2. Go to 'autopainter.py' and update all the 'path' variables (except the 'videoPath' one)
+3. Create 3 new additional folders named 'Images', 'Lines' and 'Frames' at the root folder.
+4. Create 2 folders at your google drive root named 'bloob_buffer' and 'Bloobs'
+5 If you haven't yet, do the [python quickstart](https://developers.google.com/drive/api/v3/quickstart/python) at the google drive API
+6. Add your 'credentials.json' and 'token.pickle' (created at the step above) to the 'myDrive' folder to give the application access to your drive
+7. Add a new linework image to the 'bloob_buffer' folder and run the application (reffer to the good/bad image example)
+8. In a few seconds, you should see a finished linework & timelapse uploaded at your 'Bloob' drive.
 
 #### Modules
 You will need a bunch of different modules, check the 'autopainter.py' and 'gdriveservice.py' for the names.
+
 #### How and what images to feed the program
 ![](inputexample.png)
 * The image input need to be located at a drive folder in root called 'bloob_buffer' (you could change this).
@@ -35,30 +47,22 @@ The program will run fine with landscape images, but it will rotate it to portra
 * Check the folder, there are examples.
 * The audio length needs to meet the timelapse lenghts in your case. In mine, to color 3 ~ 5 pictures, 10 second clips are long enought.
 * If its to short, it will mute mid video, if its too long, it will drag the last frame.
-### If you use VSCode...
+
+#### If you use VSCode...
 * You might need to edit the 'settings.json' w/ your python path & the 'myDriver' folder location.
-
-### Installing
-
-1. Download or clone the repository
-2. Go to 'autopainter.py' and update all the 'path' variables (except the 'videoPath' one)
-3. Create 3 new additional folders named 'Images', 'Lines' and 'Frames' at the root folder.
-4. Create 2 folders at your google drive root named 'bloob_buffer' and 'Bloobs'
-5 If you haven't yet, do the [python quickstart](https://developers.google.com/drive/api/v3/quickstart/python) at the google drive API
-6. Add your 'credentials.json' and 'token.pickle' (created at the step above) to the 'myDrive' folder to give the application access to your drive
-7. Add a new linework image to the 'bloob_buffer' folder and run the application (reffer to the good/bad image example)
-8. In a few seconds, you should see a finished linework & timelapse uploaded at your 'Bloob' drive.
 
 ## Deployment
 
 I implemented this in a [pythonanywhere](https://www.pythonanywhere.com/) live server to get advantage from the task schedule, 
-so I don't have to mannualy start the process for new lines daily. Thats easily achievable, just copy all the code, folders and follow the installing accordingly. Change paths as needed.
+so I don't have to mannualy start the process for new lines daily. That's easily achievable, just copy all the code, folders and follow the installing accordingly. Change paths as needed.
 
 *OBS.: If you have any problem related to sockets there, reinstalling the pysockets module solved it here. Also Google is your friend.*
 
 ## Built With
 
 * Python with a bunch of modules. Most notably the 'requests', 'PIL', 'cv2', 'moviepy' and the google drive ones.
+* [Colormind API](http://colormind.io/) for cool color palettes.
+* [Random word API](https://random-word-api.herokuapp.com/home) for cool placeholder names. 
 
 ## Authors
 
